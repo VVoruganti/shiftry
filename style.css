@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+}
+
+textarea {
+  display:block;
+  margin:auto;
+  width:60%;
+}
+
+button {
+  display:inline-block;
+}
+
+#Players_wrapper {
+  width:60% !important;
+  margin:auto;
+}

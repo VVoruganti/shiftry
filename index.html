@@ -1,0 +1,60 @@
+<html>
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title> DASD STEM Assassin Game Management </title>
+</head>
+<body>
+<h1>Match up Generator</h1>
+<textarea id="data" name="field" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+ <button type="button" onclick="sort()">Submit</button>
+ <button type="button" onclick="updateDataTable()">Update Data Table</button>
+ <br>
+ <br>
+ <table id="Players" class="display" width="100%" cellspacing="0">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Status</th>
+       <th>Target</th>s
+       <th>Phone Number</th>
+       <th>Email</th>
+     </tr>
+   </thead>
+   <tbody>
+
+   </tbody>
+ </table>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDcjtGIqHIYTN6xQEkwtMn63n8HAhNihzM",
+    authDomain: "dasd-stem-assassin-app.firebaseapp.com",
+    databaseURL: "https://dasd-stem-assassin-app.firebaseio.com",
+    projectId: "dasd-stem-assassin-app",
+    storageBucket: "dasd-stem-assassin-app.appspot.com",
+    messagingSenderId: "2422713857"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<script src="script.js"></script>
+
+</html>
