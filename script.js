@@ -3,20 +3,34 @@ var data = $("#data").val();
 var database = firebase.database();
 var assassinArray = [];
 
+var access;
 
-function sort(){
-  data = $("#data").val();
-  var filter = data.split(/\n/);
-  for(var i = 0; i < filter.length; i++) {
-  filter[i] = filter[i].split(",");
+function defAccess() {
+   database.ref("Allow Access").once('value').then(function(dataSnapshot) {
+     access = dataSnapshot.val()
+   })
+console.log(access);
+}
+
+function sort() {
+  defAccess();
+  if( access == 1) {
+    data = $("#data").val();
+    var filter = data.split(/\n/);
+    for(var i = 0; i < filter.length; i++) {
+    filter[i] = filter[i].split(",");
+    }
+    for(var i = 0; i <filter.length; i++) {
+      assassinArray.push(filter[i][0]);
+    }
+    //console.log(assassinArray);
+    //console.log(filter);
+    setDatabase(filter);
+    match();
   }
-  for(var i = 0; i <filter.length; i++) {
-    assassinArray.push(filter[i][0]);
+  else {
+    alert("Access Denied")
   }
-  //console.log(assassinArray);
-  //console.log(filter);
-  setDatabase(filter);
-  match();
 }
 
 function resetDatabase() {
