@@ -5,15 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
   <title> DASD STEM Assassin Game Management </title>
 </head>
 <body>
 <h1>Match up Generator</h1>
-<textarea id="data" name="field" rows="10" cols="30">
+<div id="Player-Form">
+<textarea class="form-control" id="data" name="field" rows="10" cols="30">
 The cat was playing in the garden.
 </textarea>
- <button type="button" onclick="sort()">Submit</button>
- <button type="button" onclick="updateDataTable()">Update Data Table</button>
+<button type="button" class="btn btn-primary" onclick="sort()">Submit</button>
+<button type="button" class="btn btn-primary" onclick="updateDataTable()">Update Data Table</button>
+<button type="button" class="btn btn-success">Edit Mode</button>
+<button type="button" class="btn btn-danger">Read Mode</button>
+<p>Current Status: </span >Read Mode</span></p>
+</div>
+</div>
  <br>
  <br>
  <table id="Players" class="display" width="100%" cellspacing="0">

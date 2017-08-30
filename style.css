@@ -2,7 +2,7 @@ h1{
   text-align: center;
 }
 
-textarea {
+#Player-Form {
   display:block;
   margin:auto;
   width:60%;
@@ -10,6 +10,7 @@ textarea {
 
 button {
   display:inline-block;
+  margin-top: 10px;
 }
 
 #Players_wrapper {
