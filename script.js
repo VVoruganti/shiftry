@@ -10,11 +10,10 @@ function defAccess() {
      access = dataSnapshot.val()
    })
 console.log(access);
+return access;
 }
 
 function sort() {
-  defAccess();
-  if( access == 1) {
     data = $("#data").val();
     var filter = data.split(/\n/);
     for(var i = 0; i < filter.length; i++) {
@@ -24,13 +23,9 @@ function sort() {
       assassinArray.push(filter[i][0]);
     }
     //console.log(assassinArray);
-    //console.log(filter);
+    console.log(filter);
     setDatabase(filter);
     match();
-  }
-  else {
-    alert("Access Denied")
-  }
 }
 
 function resetDatabase() {
