@@ -29,7 +29,10 @@ function sort() {
 }
 
 function resetDatabase() {
-  database.ref("Players").set({name:"name"})
+  database.ref("Players").set(
+    {
+      name:"name"
+    })
 }
 
 
