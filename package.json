@@ -4,8 +4,10 @@
   "description": "A simple application to help organize a game of [assassin](https://en.wikipedia.org/wiki/Assassin_(game)) I played this game back in high school as a fundraiser organizered by the student council.",
   "main": "script.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,10 @@
   },
   "homepage": "https://github.com/VVoruganti/shiftry#readme",
   "dependencies": {
-    "@passageidentity/passage-elements": "^0.1.0-beta.46",
+    "@passageidentity/passage-elements": "0.1.0-beta.46",
+    "next": "^12.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-dom": "^18.2.0"
   },
   "browserslist": {
     "production": [
